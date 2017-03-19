@@ -17,9 +17,32 @@
 .header{
   align-content: center;
 }
-#message-box{
-  background-color: #000000;
+.user-box{
+  background-color: #00838f;
   color: #ffffff;
+  border-radius: 20px 20px 0px 0px;
+  padding-left: 20px;
+}
+
+ .messager-box{
+  background-color: #f5f5f5;
+}
+/*
+#user-box{
+  background-color: #00838f;
+  color: #ffffff;
+  border-radius: 20px 20px 0px 0px;
+}*/
+
+.btn-box{
+  background-color: #00838f;
+  color: #ffffff;
+
+}
+.chat-room{
+  padding-left:20px;
+  margin-bottom: 20px;
+
 }
 
 body {
