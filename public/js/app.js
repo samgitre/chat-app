@@ -2,32 +2,34 @@ var name = getQueryVariable('name')|| 'Anonymous';
 var room = getQueryVariable('room');
 var socket = io();
 
-console.log(name +' wants to join ' + room);
 
 var welcomeMessage = 'Hi, ' +name;
-jQuery('.user-name').text(welcomeMessage);
+ $('.user-name').text(welcomeMessage);
+ $('.room-name').text('Room: ' + room);
 
-// var $roomName = jQuery('ul .room-list li').click().val();
-// jQuery('.room-name').text(roomName);
 
 socket.on('connect', function () {
   console.log('User connected');
+  socket.emit('JoinRoom', {
+    name :name,
+    room : room
+  });
 });
+
 
 socket.on('message', function(message) {
   var momentTimestamp = moment.utc(message.timestamp);
-  var $message = jQuery('.messages');
+  var $message = $('.messages');
 
   console.log('new message');
   console.log(message.text);
-  
+
   $message.prepend('<p> '+ message.text +'</p>')
   $message.prepend('<p> <strong>'+ message.name + '  ' + momentTimestamp.local().format('h:mm a')
   +'</strong></p>');
-
 });
 
-var $form = jQuery('#messager-form');
+var $form = $('#messager-form');
 $form.on('submit', function(event){
   event.preventDefault();
   var $message = $form.find('input[name=messenger]');

@@ -30,41 +30,25 @@
        <div class="col-sm-10 col-md-8 col-lg-8">
 
           <div class="chat-room user-box">
-            <div class="row">
-              <div class="col-md-3">
+            <div class="row col-md-offset-1">
+              <div class="col-md-6">
                 <h4 class="user-name">Name</h4>
               </div>
-              <div class="col-md-3 col-xs-offset-2">
+              <div class="col-md-6">
                 <h4 class="room-name">Room :</h4>
               </div>
             </div>
            </div>
 
-
-
      <form id="messager-form">
      <div class="input-group">
-       <div class="input-group-btn">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Room <span class="caret"></span></button>
-            <ul class="dropdown-menu" id="room-list">
-              <li><a href="#">Technical Suport</a></li>
-              <li><a href="#">Analyst</a></li>
-              <li><a href="#">Developers</a></li>
-              <li><a href="#">Marketing</a></li>
-              <li><a href="#">HR</a></li>
-              <li><a href="#">General room</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Board of Directors</a></li>
-            </ul>
-          </div><!-- /btn-group -->
-
-       <input type="text" class="form-control" placeholder="Select a room to chat with ....." name="messenger"/>
+       <input type="text" class="form-control" placeholder="Start chating......" name="messenger"/>
        <span class="input-group-btn">
          <input class="btn btn-box" type="submit" value="Send"/>
        </span>
      </div>
          </form>
-
+         <hr />
          <div class="messages messager-box">
            <!-- messages goes here -->
           </div>
